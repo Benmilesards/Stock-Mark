@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Predictor - Stock Tracker</title>
+    <link rel="icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 30px;
+            background: #fff;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        textarea, input[type="submit"] {
+            width: 100%;
+            margin: 10px 0;
+        }
+        textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .prediction {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e7f0e7;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AI Predictor</h2>
+        <form action="/ai_predicter" method="post">
+            <textarea name="user_input" rows="5" placeholder="Enter your stock query here..."></textarea>
+            <input type="submit" value="Get Prediction">
+        </form>
+        {% if prediction %}
+            <div class="prediction">
+                <h3>Prediction:</h3>
+                <p>{{ prediction }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
