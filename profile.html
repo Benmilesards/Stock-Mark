@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Stock Tracker</title>
+    <link rel="icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 30px;
+            background: #fff;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            text-align: center;
+        }
+        .profile-info img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .profile-info input[type="file"] {
+            margin: 20px 0;
+        }
+        .profile-info textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+        }
+        .profile-info button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .profile-info button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>{{ username }}'s Profile</h2>
+        <div class="profile-info">
+            <img src="default-profile.png" alt="Profile Picture">
+            <form action="/update_profile" method="post" enctype="multipart/form-data">
+                <input type="file" name="profile_pic">
+                <textarea name="bio" placeholder="Update your bio..."></textarea>
+                <button type="submit">Update Profile</button>
+            </form>
+            <h3>My Stocks</h3>
+            <!-- Example of displaying stocks (Placeholder data) -->
+            <ul>
+                <li>Stock A: $1000</li>
+                <li>Stock B: $500</li>
+                <!-- Dynamically generated list of stocks -->
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
