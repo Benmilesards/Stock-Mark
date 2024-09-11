@@ -4,45 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Stock Tracker</title>
-    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="icon" href="logo.png">
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
         }
         .container {
-            width: 80%;
+            width: 50%;
             margin: auto;
-            overflow: hidden;
-        }
-        form {
+            padding: 30px;
             background: #fff;
-            padding: 20px;
-            margin-top: 30px;
+            margin-top: 50px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        input[type="text"], input[type="email"], input[type="password"] {
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            box-sizing: border-box;
+            border: 1px solid #ddd;
         }
         input[type="submit"] {
-            background: #0779e4;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
             color: #fff;
-            padding: 10px 20px;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Create an Account</h2>
-        <form action="{{ url_for('signup') }}" method="post">
+        <h2>Sign Up for Stock Tracker</h2>
+        <form action="/signup" method="post">
             <input type="text" name="username" placeholder="Username" required>
-            <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
             <input type="submit" value="Sign Up">
         </form>
