@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Money Investment - Stock Tracker</title>
+    <link rel="icon" href="logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 30px;
+            background: #fff;
+            margin-top: 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .investment-form input[type="text"], .investment-form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+        }
+        .investment-form input[type="submit"] {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .investment-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .results {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e7f0e7;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Fake Money Investment</h2>
+        <form class="investment-form">
+            <input type="text" name="stock" placeholder="Enter stock symbol" required>
+            <input type="number" name="amount" placeholder="Enter amount to invest" required>
+            <input type="submit" value="Invest">
+        </form>
+        <div class="results">
+            <h3>Investment Results:</h3>
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+</body>
+</html>
